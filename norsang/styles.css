@@ -1,0 +1,527 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: #fff;
+  }
+  /* Navigation Bar */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(55, 20, 40, 0.8);
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ff6969;
+  font-weight: bold;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 0.8rem;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none; /* Hide on desktop */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  /* Gradient Overlays */
+  .hero::before,
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Adjust the height of gradient as needed */
+    pointer-events: none; /* Prevent interfering with user interactions */
+    z-index: 1;
+  }
+  
+  .hero::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  }
+  
+  .hero::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  }
+
+  .whatsapp-icon a{
+text-decoration: none;
+  }
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* background-color: #25d366; */
+    border-radius: 50%;
+    padding: 5px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+
+  .quote-section {
+    color: white;
+    z-index: 2;
+  }
+  
+  .quote-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-section .author {
+    font-size: 1.2rem;
+    color: #f89c9c;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .image-navbar{
+    margin:0;
+ width:20px;
+    position:absolute;
+  } 
+  .arrow {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Side Buttons */
+  .side-buttons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icon {
+    background-color: #a04d60;
+    color: white;
+    border: none;
+    padding: 1rem;
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+/* Hero Section */
+.hero-video {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+/* Centered Title */
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* Subtitle */
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+  }
+  
+  /* Video Cards Row */
+  .video-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between cards */
+    flex-wrap: wrap;
+    margin:20px;
+  }
+  
+  /* Individual Video Card */
+  .video-card {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: #000; /* Fallback background */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect for Video Cards */
+  .video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Videos Style */
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Footer General Styles */
+.footer {
+    background: #2e0e25; /* Dark Purple Background */
+    color: #ffb3b3; /* Light pinkish text color */
+    padding: 30px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    color: #ffb3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffffff; /* White on hover */
+  }
+  
+  .footer-logo {
+    position: relative;
+  }
+  
+  .footer-logo h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+  
+  .footer-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 24px;
+    color: #ffb3b3; /* Light pink icon */
+  }
+  
+  .footer-copyright {
+    font-size: 12px;
+    color: #ffb3b3;
+  }
+  /* General Form Styles */
+.register-form {
+    background: linear-gradient(to bottom, #4c2136, #8a485d); /* Gradient Background */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 25%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    background-color: #8a485d;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .input-group input::placeholder {
+    color: #d6a6a6; /* Placeholder color */
+  }
+  
+  .input-group input:focus {
+    border-color: #ffb3b3;
+  }
+  
+  .agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .agreement input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #c62839; /* Checkbox color */
+  }
+  
+  .contact-footer{
+    background: linear-gradient(to bottom, #4c2136, #8a485d); /* Gradient Background */
+    padding: 30px;
+    border-radius: 8px;
+  }
+  .register-btn {
+    background: #fff;
+    color: #8a485d;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .register-btn:hover {
+    background: #f0d6d6;
+  }
+
+
+
+
+  /* Section Wrapper */
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10%;
+    min-height: 50vh;
+  }
+
+  /* Content Styling */
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Blurred effect */
+    border-radius: 10px;
+    color: #000; /* Dark text for readability */
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: rgb(98, 92, 92)77;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+    color: #837777;
+  }
+
+  /* Image Styling */
+  .image {
+    flex: 1;
+    height:350px;
+    text-align: center;
+  }
+
+  .image img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Alternate Sections */
+  .section:nth-child(even) {
+    flex-direction: row-reverse; /* Content on left, image on right */
+  }
+
+  
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show menu button */
+  }
+
+  .nav-links {
+    display: none; /* Initially hide nav links */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(55, 20, 40, 0.9);
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
+    
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+  .bookevent_sec {
+      margin: 30px 15px;
+      padding: 20px;
+  }
+
+  .seat-grid {
+      grid-template-columns: repeat(5, 0fr); /* Reduce the number of columns */
+  }
+  video{
+    width:200px;
+    height:400px;
+    object-fit: cover;
+  }
+
+  .seat {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+  }
+
+  input {
+      width: 60%; /* Increase input width for smaller screens */
+  }
+
+  #payButton {
+      padding: 8px 15px; /* Adjust padding for smaller buttons */
+  }
+}
+
+/* For screens 480px and smaller */
+@media (max-width: 480px) {
+  .bookevent_sec {
+      margin: 20px 10px;
+      padding: 15px;
+  }
+.hero{
+  width:100%;
+  height:380px;
+}
+  .seat-grid {
+      grid-template-columns: repeat(3, 0fr); /* Further reduce the number of columns */
+      gap: 5px;
+  }
+
+  .seat {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+  }
+
+  input {
+      width: 80%; /* Make inputs occupy most of the width */
+  }
+  .section{
+    /* flex-direction: column; */
+    display:block;
+    padding:10px;
+  }
+  video{
+    width:100%;
+    height:380px;
+    object-fit: cover;
+  }
+  #payButton {
+      width: 100%; /* Button spans full width */
+      padding: 10px;
+  }
+}

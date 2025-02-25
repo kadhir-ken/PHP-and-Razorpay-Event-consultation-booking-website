@@ -1,0 +1,90 @@
+/* General Wrapper */
+*{
+
+}
+
+
+.master-norsang-wrapper {
+    
+  font-size: 20px;  font-family: "Patrick Hand", cursive;
+    color: #f4f4f4;
+    background: linear-gradient(to bottom, #3e1f2a, #7a3d4f);
+    padding: 50px 20px;
+    line-height: 1.8;
+    overflow: hidden;
+  }
+  
+  /* Title Section */
+  .title-section {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fade-in 1.5s ease-in-out;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #ffcccb;
+    font-style: italic;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: all 1s ease-out;
+  }
+  
+  /* Left and Right Alignment */
+  .content-section.left {
+    text-align: left;
+    transform: translateX(-100%);
+  }
+  
+  .content-section.right {
+    text-align: left;
+    transform: translateX(100%);
+  }
+  
+  /* Scroll Animation Classes */
+  .content-section.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Keyframes */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 2rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
+    .content-section {
+      text-align: center !important;
+      transform: translateX(0);
+    }
+  }
+  
